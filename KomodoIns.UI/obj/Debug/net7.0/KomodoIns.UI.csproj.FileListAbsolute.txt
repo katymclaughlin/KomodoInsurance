@@ -1,0 +1,14 @@
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.UI
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.UI.deps.json
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.UI.runtimeconfig.json
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.UI.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.UI.pdb
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.AssemblyInfoInputs.cache
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.AssemblyInfo.cs
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.csproj.CoreCompileInputs.cache
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/refint/KomodoIns.UI.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.pdb
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.genruntimeconfig.cache
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/ref/KomodoIns.UI.dll
