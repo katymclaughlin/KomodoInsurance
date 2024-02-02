@@ -16,4 +16,9 @@
     <PackageReference Include="coverlet.collector" Version="3.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KomodoIns.Data\KomodoIns.Data.csproj" />
+    <ProjectReference Include="..\KomodoIns.Repository\KomodoIns.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

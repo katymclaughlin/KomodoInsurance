@@ -9,3 +9,4 @@
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/refint/KomodoIns.Repository.dll
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/KomodoIns.Repository.pdb
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/ref/KomodoIns.Repository.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/KomodoIns.Repository.csproj.AssemblyReference.cache

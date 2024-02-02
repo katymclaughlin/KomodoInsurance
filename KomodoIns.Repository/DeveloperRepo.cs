@@ -25,7 +25,7 @@ namespace KomodoIns.Repository
         //NOTE - get by id (search by id)
         public Developer GetDeveloperById(int id)
         {
-            for each(DeveloperRepo developer in _developerDirectory)
+            foreach (DeveloperRepo developer in _developerDirectory())
             {
                 if (developer.Id == id)
                 {
@@ -70,12 +70,12 @@ namespace KomodoIns.Repository
         }
 
         //NOTE - Delete developers (Delete)
-        public bool RemoveDeveloperFromList(int id)
+        public bool RemoveDeveloperFromList(int id);
 
-        if (developer == null)
+        /*if (developer == null)
         {
             return false;
-        }
+        }*/
 
         int initialCount = _developerDirectory.Count;
         _developerDirectory.Remove(developer);
