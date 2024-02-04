@@ -4,15 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using KomodoIns.Data;
 
-
-            //public string TeamName { get; set; }
-
-            //public int TeamId { get; set; }
-
-            //public List<Developer> TeamMembers { get; set; }
-
-//namespace KomodoIns.Data
-//{
+namespace KomodoIns.Data
+{
     public class DevTeam
     {
             public string TeamName { get; set; }
@@ -34,4 +27,4 @@ using KomodoIns.Data;
     
     }
     }
-//}
+}

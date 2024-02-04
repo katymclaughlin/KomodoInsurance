@@ -2,7 +2,7 @@
 
 public class Developer
 {
-    public Developer(){}
+    public Developer() {}
     
     public Developer (string name, int id, bool hasPluralsight) 
     {

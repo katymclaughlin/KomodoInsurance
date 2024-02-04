@@ -11,7 +11,7 @@ namespace KomodoIns.Repository
         private List<Developer> _developerDirectory = new List<Developer>();
         
         //NOTE - Add developers (Create)
-        public void AddDeveloperToList(DeveloperRepo developer)
+        public void AddDeveloperToList(Developer developer)
         {
             _developerDirectory.Add(developer);
         }
@@ -25,7 +25,7 @@ namespace KomodoIns.Repository
         //NOTE - get by id (search by id)
         public Developer GetDeveloperById(int id)
         {
-            foreach (DeveloperRepo developer in _developerDirectory())
+            foreach (Developer developer in _developerDirectory)
             {
                 if (developer.Id == id)
                 {
@@ -40,7 +40,7 @@ namespace KomodoIns.Repository
         {
             Developer oldDeveloper = GetDeveloperById(id);
 
-            if (oldDeveloper !- null)
+            if (oldDeveloper != null)
             {
                 oldDeveloper.Name = newDeveloper.Name;
                 oldDeveloper.Id = newDeveloper.Id;
@@ -53,7 +53,7 @@ namespace KomodoIns.Repository
             }
         } 
 
-        public Developer UpdateExistingDeveloperReturnRecord(int id, DeveloperRepo newDeveloper)
+        public Developer UpdateExistingDeveloperReturnRecord(int id, Developer newDeveloper)
         {
             Developer oldDeveloper = GetDeveloperById(id);
 
@@ -64,29 +64,30 @@ namespace KomodoIns.Repository
                 oldDeveloper.HasPluralsight = newDeveloper.HasPluralsight;
                 return oldDeveloper;
             }
-            
                 return null;
-            
         }
+        
 
         //NOTE - Delete developers (Delete)
-        public bool RemoveDeveloperFromList(int id);
-
-        /*if (developer == null)
+        public bool RemoveDeveloperFromList(int id)
         {
+            Developer developer = GetDeveloperById(id);
+
+            if (developer == null)
+            {
             return false;
-        }*/
+            }
+            int initialCount = _developerDirectory.Count;
+            _developerDirectory.Remove(developer);
 
-        int initialCount = _developerDirectory.Count;
-        _developerDirectory.Remove(developer);
-
-        if (initialCount > _developerDirectory.Count)
-        {
+            if (initialCount > _developerDirectory.Count)
+            {
             return true;
-        }
-        else
-        {
+            }
+            else
+            {
             return false;
-        }
+            }
+         }
     }
 }

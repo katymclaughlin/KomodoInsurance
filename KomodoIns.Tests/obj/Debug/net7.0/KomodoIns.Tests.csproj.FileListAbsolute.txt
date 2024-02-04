@@ -96,3 +96,8 @@
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/obj/Debug/net7.0/KomodoIns.Tests.pdb
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/obj/Debug/net7.0/KomodoIns.Tests.genruntimeconfig.cache
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/obj/Debug/net7.0/ref/KomodoIns.Tests.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/bin/Debug/net7.0/CoverletSourceRootsMapping
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/bin/Debug/net7.0/KomodoIns.Data.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/bin/Debug/net7.0/KomodoIns.Repository.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/bin/Debug/net7.0/KomodoIns.Data.pdb
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Tests/bin/Debug/net7.0/KomodoIns.Repository.pdb

@@ -10,3 +10,6 @@
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/KomodoIns.Repository.pdb
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/ref/KomodoIns.Repository.dll
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/KomodoIns.Repository.csproj.AssemblyReference.cache
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/bin/Debug/net7.0/KomodoIns.Data.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/bin/Debug/net7.0/KomodoIns.Data.pdb
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/obj/Debug/net7.0/KomodoIns.Repository.csproj.CopyComplete
