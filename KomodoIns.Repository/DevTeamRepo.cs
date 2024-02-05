@@ -8,19 +8,26 @@ namespace KomodoIns.Repository
 {
     public class DevTeamRepo
     {
+        private List<DevTeam> _developerTeamDirectory = new List<DevTeam>();
 
-        public string TeamName { get; set; }
+            //NOTE - Managers will be able to create a team (Create)
 
-        public int TeamId { get; set; }
-
-        public List<Developer> TeamMembers { get; set; }
+            public void CreateTeam(DevTeam developerTeam)
+        {
+            _developerTeamDirectory.Add(developerTeam);
+        }
+    }
 
             //NOTE - Managers need to be able to add a member to a team by their unique identifier (Create)
+
+    public class AddMemberById 
+    {
+        
+    }
             //NOTE - Managers need to be able to remove a member from a team by their unique identifier (Delete)
-            //NOTE - Managers will be able to create a team (Create)
             //NOTE - Add developers individually from the Developer Directory to that team (Create)
             //NOTE - Update a team (Update)
             //NOTE - Delete a team (Delete)
             //NOTE - Get a list of teams (Read)
-    }
+
 }

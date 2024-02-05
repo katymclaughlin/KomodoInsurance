@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "KomodoIns.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/KomodoIns.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KomodoIns.Data.dll": {}
+        }
+      },
+      "KomodoIns.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "KomodoIns.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KomodoIns.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KomodoIns.Repository.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "KomodoIns.Data/1.0.0": {
+      "type": "project",
+      "path": "../KomodoIns.Data/KomodoIns.Data.csproj",
+      "msbuildProject": "../KomodoIns.Data/KomodoIns.Data.csproj"
+    },
+    "KomodoIns.Repository/1.0.0": {
+      "type": "project",
+      "path": "../KomodoIns.Repository/KomodoIns.Repository.csproj",
+      "msbuildProject": "../KomodoIns.Repository/KomodoIns.Repository.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "KomodoIns.Data >= 1.0.0",
+      "KomodoIns.Repository >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/katymclaughlin/.nuget/packages/": {}
@@ -31,7 +69,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Data/KomodoIns.Data.csproj": {
+              "projectPath": "/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Data/KomodoIns.Data.csproj"
+            },
+            "/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/KomodoIns.Repository.csproj": {
+              "projectPath": "/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.Repository/KomodoIns.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

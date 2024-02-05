@@ -11,9 +11,12 @@ namespace KomodoIns.Repository
         private List<Developer> _developerDirectory = new List<Developer>();
         
         //NOTE - Add developers (Create)
-        public void AddDeveloperToList(Developer developer)
+        public bool AddDeveloperToList(Developer developer)
         {
+            int startingCount = _developerDirectory.Count;
             _developerDirectory.Add(developer);
+            bool wasAdded = (_developerDirectory.Count >startingCount) ? true : false;
+            return wasAdded;
         }
 
         //NOTE - Be able to see a list of existing developers (Read)

@@ -12,3 +12,9 @@
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.pdb
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.genruntimeconfig.cache
 /Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/ref/KomodoIns.UI.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.csproj.AssemblyReference.cache
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.Data.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.Repository.dll
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.Repository.pdb
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/bin/Debug/net7.0/KomodoIns.Data.pdb
+/Users/katymclaughlin/Desktop/ElevenFiftyProjects/codingFoundations/dotnetProjects/Komodo/KomodoIns.UI/obj/Debug/net7.0/KomodoIns.UI.csproj.CopyComplete
