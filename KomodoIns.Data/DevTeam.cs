@@ -26,5 +26,9 @@ namespace KomodoIns.Data
         TeamId = teamId;
     
     }
+
+        public DevTeam()
+        {
+        }
     }
 }

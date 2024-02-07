@@ -12,10 +12,14 @@ namespace KomodoIns.Repository
 
             //NOTE - Managers will be able to create a team (Create)
 
-            public void CreateTeam(DevTeam developerTeam)
+            public bool CreateTeam(DevTeam developerTeam)
         {
+            int startingCount = _developerTeamDirectory.Count;
             _developerTeamDirectory.Add(developerTeam);
+            bool wasAdded = (_developerTeamDirectory.Count > startingCount) ? true: false;
+            return wasAdded;
         }
+
     }
 
             //NOTE - Managers need to be able to add a member to a team by their unique identifier (Create)

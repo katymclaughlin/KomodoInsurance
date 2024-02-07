@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using KomodoIns.Data;
 
@@ -26,7 +27,7 @@ namespace KomodoIns.Repository
         }
 
         //NOTE - get by id (search by id)
-        public Developer GetDeveloperById(int id)
+        public Developer GetDeveloperById(Guid id)
         {
             foreach (Developer developer in _developerDirectory)
             {
@@ -39,15 +40,16 @@ namespace KomodoIns.Repository
         }
 
         //NOTE - Update developers (Update)
-        public bool UpdateExistingDeveloper(int id, Developer newDeveloper)
+        public bool UpdateExistingDeveloper(int id, string Name)
         {
-            Developer oldDeveloper = GetDeveloperById(id);
+            Developer oldDeveloper = _developerDirectory[id];
 
             if (oldDeveloper != null)
             {
-                oldDeveloper.Name = newDeveloper.Name;
-                oldDeveloper.Id = newDeveloper.Id;
-                oldDeveloper.HasPluralsight = newDeveloper.HasPluralsight;
+                oldDeveloper.Name = Name;
+
+            _developerDirectory[id] = oldDeveloper;
+
                 return true;
             }
             else
@@ -56,7 +58,7 @@ namespace KomodoIns.Repository
             }
         } 
 
-        public Developer UpdateExistingDeveloperReturnRecord(int id, Developer newDeveloper)
+        public Developer UpdateExistingDeveloperReturnRecord(Guid id, Developer newDeveloper)
         {
             Developer oldDeveloper = GetDeveloperById(id);
 
@@ -74,14 +76,9 @@ namespace KomodoIns.Repository
         //NOTE - Delete developers (Delete)
         public bool RemoveDeveloperFromList(int id)
         {
-            Developer developer = GetDeveloperById(id);
-
-            if (developer == null)
-            {
-            return false;
-            }
+            
             int initialCount = _developerDirectory.Count;
-            _developerDirectory.Remove(developer);
+            _developerDirectory.RemoveAt(id);
 
             if (initialCount > _developerDirectory.Count)
             {

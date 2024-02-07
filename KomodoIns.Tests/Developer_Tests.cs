@@ -17,7 +17,7 @@ namespace KomodoIns.Tests
         {
             Developer myDev = new Developer();
             myDev.Name = "Pac Man";
-            myDev.Id = 1;
+            //myDev.Id = 1;
             myDev.HasPluralsight = false;
 
             Assert.IsFalse(myDev.HasPluralsight);
