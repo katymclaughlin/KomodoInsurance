@@ -20,18 +20,76 @@ namespace KomodoIns.Repository
             return wasAdded;
         }
 
-    }
-
             //NOTE - Managers need to be able to add a member to a team by their unique identifier (Create)
 
-    public class AddMemberById 
-    {
+            public class AddMemberById 
+            {
         
-    }
-            //NOTE - Managers need to be able to remove a member from a team by their unique identifier (Delete)
-            //NOTE - Add developers individually from the Developer Directory to that team (Create)
-            //NOTE - Update a team (Update)
-            //NOTE - Delete a team (Delete)
+            }
+
             //NOTE - Get a list of teams (Read)
 
+            public List<DevTeam> GetListofTeams()
+            {
+            return _developerTeamDirectory;
+            }
+
+//NOTE - Managers need to be able to remove a member from a team by their unique identifier (Delete)
+//NOTE - Add developers individually from the Developer Directory to that team (Create)
+            
+            //NOTE - Update a team (Update)
+
+            /*public bool UpdateExistingTeam(int TeamId, string TeamName)
+            {
+            DevTeam oldTeam = _developerTeamDirectory[TeamId];
+
+            if (oldTeam != null)
+            {
+                oldTeam.TeamName = TeamName;
+
+            _developerTeamDirectory[TeamId] = oldTeam;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            } */
+
+            public bool UpdateExistingTeam(int TeamId, int fieldId, string updatedValue)
+            {
+            DevTeam oldContent = _developerTeamDirectory[TeamId];
+            if (fieldId == 1)
+            {
+                oldContent.TeamName = updatedValue;
+            }
+            else if (fieldId == 2)
+            {
+                oldContent.TeamId = Convert.ToInt32(updatedValue);
+            }
+            _developerTeamDirectory[TeamId] = oldContent;
+
+            return true;
+            }
+            
+            //NOTE - Delete a team (Delete)
+
+            public bool RemoveTeamFromList(int id)
+            {
+            
+            int initialCount = _developerTeamDirectory.Count;
+            _developerTeamDirectory.RemoveAt(id);
+
+            if (initialCount > _developerTeamDirectory.Count)
+            {
+            return true;
+            }
+            else
+            {
+            return false;
+            }
+            }
+
+    }
 }

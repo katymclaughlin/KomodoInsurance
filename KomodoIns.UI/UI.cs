@@ -17,7 +17,7 @@ namespace Komodo_UI
             Console.WriteLine("==========================================");
             for (int i = 0; i < DeveloperList.Count; i++ )
             {
-            Console.WriteLine(DeveloperList[i].Name + "                " + DeveloperList[i].Id + "              ");
+            Console.WriteLine(i + "   " + DeveloperList[i].Name + "                " + DeveloperList[i].Id + "              ");
             }
         }
         
@@ -65,7 +65,7 @@ namespace Komodo_UI
             List<Developer> DeveloperList = developerList.GetDeveloperList();
             for (int i = 0; i < DeveloperList.Count; i++ )
             {
-                Console.WriteLine(i + " " + DeveloperList[i].Name);
+                Console.WriteLine(i + " " + " " + DeveloperList[i].Name);
             }
             int updateUserInput = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please provide the new developer name:");
@@ -80,7 +80,7 @@ namespace Komodo_UI
             List<Developer> DeveloperList = developerList.GetDeveloperList();
             for (int i = 0; i < DeveloperList.Count; i++)
             {
-                Console.WriteLine(i + " " + DeveloperList[i].Name);
+                Console.WriteLine(i + "  " + DeveloperList[i].Name);
             }
             int deleteUserInput = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Deleting Developer # " + deleteUserInput);
@@ -99,29 +99,89 @@ namespace Komodo_UI
             NewTeam.TeamId = Convert.ToInt32(addTeamInput2);
             bool AddTeam = devTeamList.CreateTeam(NewTeam);
             Console.WriteLine("Adding the " + addTeamInput + " group with ID " + addTeamInput2 + " to our Team Directory");
-
         }
         
         public void ListofTeams()
         {
+            List<DevTeam> DevTeamList = devTeamList.GetListofTeams();
+            Console.WriteLine ("Number of Teams = " + DevTeamList.Count);
+            Console.WriteLine("Team Name                  | ID       ");
+            Console.WriteLine("======================================");
+            for (int i = 0; i < DevTeamList.Count; i++ )
+            {
+            Console.WriteLine(DevTeamList[i].TeamName + "                " + DevTeamList[i].TeamId + "              ");
+            }
+        }
 
+        public void UpdateTeam()
+        {
+            Console.WriteLine ("Please type the number next to the team you would like to update.");
+            List<DevTeam> DevTeamList = devTeamList.GetListofTeams();
+            for (int i = 0; i < DevTeamList.Count; i++ )
+            {
+                Console.WriteLine(i + " " + DevTeamList[i].TeamName);
+            }
+            int updateTeamUserInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("You are wanting to update number " + updateTeamUserInput);
+            Console.WriteLine("Type 1 to update the Team Name");
+            Console.WriteLine("Type 2 to update the Team Id");
+            int updateTeamUserInput2 = Convert.ToInt32(Console.ReadLine());
+            if (updateTeamUserInput2 == 1)
+            {
+                Console.WriteLine ("Please provide the new Team Name");
+            }
+            else if (updateTeamUserInput2 == 2)
+            {
+                Console.WriteLine ("Please provide the new Team ID");
+            }
+            else 
+            {
+                Console.WriteLine ("That is not a valid option, returning to the main menu");
+                return;
+            }
+            string UserUpdateChoice = Console.ReadLine();
+            bool UpdateExistingTeam = devTeamList.UpdateExistingTeam(updateTeamUserInput, updateTeamUserInput2, UserUpdateChoice);
         }
 
 //NOTE - Should be able to see a list of existing developers to choose from and add to existing teams
 //NOTE - Challenge: multi-select add - add multiple develoeprs to a team at once
-        public void UpdateTeam()
+        public void AddDeveloperToTeams()
         {
+            Console.WriteLine("Please type the number next to the Team you would like to add developers to.");
+            List<DevTeam> DevTeamList = devTeamList.GetListofTeams();
+            for (int i = 0; i < DevTeamList.Count; i++)
+            {
+                Console.WriteLine(i + " " + DevTeamList[i].TeamName);
+            }
+            int AddDevelopertoTeamInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Adding developers to Team # " + AddDevelopertoTeamInput);
+            Console.WriteLine("Here is a list of developers");
+            List<Developer> DeveloperList = developerList.GetDeveloperList();
+            Console.WriteLine ("Developer List Amount = " + DeveloperList.Count);
+            Console.WriteLine("Developer Name                 | ID       ");
+            Console.WriteLine("==========================================");
+            for (int i = 0; i < DeveloperList.Count; i++ )
+            {
+            Console.WriteLine(i + "     " + DeveloperList[i].Name + "                " + DeveloperList[i].Id + "              ");
+            }
 
         }
 
         public void DeleteTeam()
         {
-
+            Console.WriteLine("Please type the number next to the Team you would like to delete.");
+            List<DevTeam> DevTeamList = devTeamList.GetListofTeams();
+            for (int i = 0; i < DevTeamList.Count; i++)
+            {
+                Console.WriteLine(i + " " + DevTeamList[i].TeamName);
+            }
+            int deleteTeamInput = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Deleting Team # " + deleteTeamInput);
+            bool DeleteTeambyIndexInput = devTeamList.RemoveTeamFromList(deleteTeamInput);
         }
 
         }
 
-        
         public class UIKomodoInsurance
         {
         public static void Main(string[] args)
@@ -163,9 +223,11 @@ namespace Komodo_UI
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("G. List of Teams");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("H. Update a Team");
+            Console.WriteLine("H. Add developers to a Team");
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("I. Delete a team");
+            Console.WriteLine("I. Update a Team");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("J. Delete a team");
             Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("EXIT");
@@ -202,9 +264,12 @@ namespace Komodo_UI
                     uih.ListofTeams();
                     break;
                 case "h":
-                    uih.UpdateTeam();
+                    uih.AddDeveloperToTeams();
                     break;
                 case "i":
+                    uih.UpdateTeam();
+                    break;
+                case "j":
                     uih.DeleteTeam();
                     break;
                 case "x":
