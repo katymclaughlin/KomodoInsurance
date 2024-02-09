@@ -97,6 +97,7 @@ namespace Komodo_UI
             string addTeamInput2 = Console.ReadLine();
             NewTeam.TeamName = addTeamInput;
             NewTeam.TeamId = Convert.ToInt32(addTeamInput2);
+            NewTeam.TeamMembers = new List<Developer>();
             bool AddTeam = devTeamList.CreateTeam(NewTeam);
             Console.WriteLine("Adding the " + addTeamInput + " group with ID " + addTeamInput2 + " to our Team Directory");
         }
@@ -105,11 +106,11 @@ namespace Komodo_UI
         {
             List<DevTeam> DevTeamList = devTeamList.GetListofTeams();
             Console.WriteLine ("Number of Teams = " + DevTeamList.Count);
-            Console.WriteLine("Team Name                  | ID       ");
-            Console.WriteLine("======================================");
+            Console.WriteLine("Team Name                  | Team Members             |ID       ");
+            Console.WriteLine("================================================================");
             for (int i = 0; i < DevTeamList.Count; i++ )
             {
-            Console.WriteLine(DevTeamList[i].TeamName + "                " + DevTeamList[i].TeamId + "              ");
+            Console.WriteLine(DevTeamList[i].TeamName + "                " + string.Join(",", DevTeamList[i].TeamMembers) + "           " + DevTeamList[i].TeamId + "              ");
             }
         }
 
@@ -164,6 +165,10 @@ namespace Komodo_UI
             {
             Console.WriteLine(i + "     " + DeveloperList[i].Name + "                " + DeveloperList[i].Id + "              ");
             }
+            Console.WriteLine("Please enter the number next to the developer you would like to add to Team # " + AddDevelopertoTeamInput );
+            int updateDevelopertoTeam = Convert.ToInt32(Console.ReadLine());
+            devTeamList.AddDevelopertoTeam(AddDevelopertoTeamInput, updateDevelopertoTeam, developerList);
+            Console.WriteLine("Developer has been added.");
 
         }
 

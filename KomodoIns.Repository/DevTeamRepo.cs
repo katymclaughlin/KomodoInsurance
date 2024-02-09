@@ -20,12 +20,13 @@ namespace KomodoIns.Repository
             return wasAdded;
         }
 
-            //NOTE - Managers need to be able to add a member to a team by their unique identifier (Create)
+            //NOTE - Managers need to be able to add a member to a team  (Create)
 
-            public class AddMemberById 
-            {
-        
-            }
+           public void AddDevelopertoTeam(int DeveloperNumber, int TeamNumber, DeveloperRepo DeveloperList)
+           {
+            Developer myDeveloper = DeveloperList.GetDeveloperList()[DeveloperNumber];
+            _developerTeamDirectory[TeamNumber].TeamMembers.Add(myDeveloper);
+           }
 
             //NOTE - Get a list of teams (Read)
 
